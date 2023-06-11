@@ -59,6 +59,10 @@
         }
     }
     
+    function toWords(num) {
+        const nums = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"];
+        return nums[num]
+    }
 
     function randomColor() {
         return d3.color(d3.rgb(randomInt(255),randomInt(255),randomInt(255)));
@@ -76,7 +80,10 @@
     Eget mi proin sed libero enim sed faucibus turpis in. Amet venenatis urna cursus eget. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Ullamcorper morbi tincidunt ornare massa. Pharetra pharetra massa massa ultricies mi quis hendrerit. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Eu non diam phasellus vestibulum lorem sed risus ultricies. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Aliquet enim tortor at auctor urna nunc id cursus. Turpis egestas sed tempus urna et pharetra. Eleifend quam adipiscing vitae proin sagittis nisl. Ipsum faucibus vitae aliquet nec ullamcorper sit. Nisl pretium fusce id velit ut tortor pretium viverra suspendisse. Ut aliquam purus sit amet luctus. Eros in cursus turpis massa tincidunt dui ut ornare. At risus viverra adipiscing at in tellus integer feugiat. Quam id leo in vitae turpis massa sed elementum. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Vitae justo eget magna fermentum iaculis.`
 
     const a = randomInt(1, 20)
+    d3.select(".title-bar-text").html(`You have ${toWords(a - 1)} (${a}) popups remaining`)
     const data = [];
+
+
 
     for (let i = 0; i < a; i++) {
         const datum = {
